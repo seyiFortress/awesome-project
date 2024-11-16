@@ -1,7 +1,113 @@
 /* ............
-    General
+    layout
 ............ */
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html{
     font-size: 18px;
+    color: #ffffff;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "DM Sans", serif;
+}
+body .overlay{
+    background: #2e189388;
+    width: 1400px;
+    height: 850px;
+    position: absolute;
+}
+body .image{
+    background: url(img/9d359a1983d55a33bd9d1ef454ff22f9.jpg);
+    width: 1400px;
+    height: 850px;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+}
+#box{
+    align-self: flex-start;
+    position: absolute;
+    margin-top: 60px;
+    max-width: 1072px;
+    /* min-height: 600px; */
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    font-size: 1.3rem;
+    margin-right: auto;
+}
+#menu{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+#menu li{
+    margin: 0 1em;
+}
+#menu li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#middle-fill{
+    font-size: 1rem;
+    padding: 0.7em 1.8em;
+    border-radius: 10em; 
+    background-color: #fff;
+    color: #482be7;
+}
+main{
+    width: 100%;
+    margin-top: auto;
+    width: 58%;
+    margin-top: 5.4em;
+}
+section #test{
+    width: 100%;
+}
+main #test h1{
+    font-size: 4rem;
+}
+#test h5{
+    font-size: 1.2rem;
+    margin-top: 1.6em;
+}
+main #cto{
+    width: 100%;
+    margin-top: 2em;
+}
+main #cto a{
+    text-decoration: none;
+}
+main #cto #big-fill{
+    font-size: 1.1rem;
+    padding: 0.9em 1.7em;
+    background: #ffffff;
+    border-radius: 5.6em;
+    color: #482BE7;
+}
+main #cto #big-white-outline{
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.30);
+    border-radius: 5.5em;
+    border: 0.1em solid rgba(255, 255, 255, 1);
+    padding: 0.9em 1.8em;
+    margin-left: 1.2em;
 }
