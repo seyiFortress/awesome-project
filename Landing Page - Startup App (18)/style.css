@@ -1,65 +1,66 @@
-/* ............
-    layout
-............ */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ...................
+    Big Screen layout
+...................... */
+
 html{
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
+    font-optical-sizing: auto;
+    font-style: normal;
     color: #ffffff;
 }
 body{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-family: "DM Sans", serif;
+    position: relative;
+    background-image: url("img/9d359a1983d55a33bd9d1ef454ff22f9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 body .overlay{
-    background: #2e189388;
-    width: 1400px;
-    height: 850px;
-    position: absolute;
-}
-body .image{
-    background: url(img/9d359a1983d55a33bd9d1ef454ff22f9.jpg);
-    width: 1400px;
-    height: 850px;
-    position: absolute;
-    background-position: center;
-    background-size: cover;
+    position: fixed;
+    background-color: #2e189388;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }
 #box{
-    align-self: flex-start;
-    position: absolute;
-    margin-top: 60px;
-    max-width: 1072px;
-    /* min-height: 600px; */
+    width: 85%;
+    /* min-width: 48em; */
+    max-width: 960px;
+    margin: auto;
+    padding-top: .5em;
+    padding-bottom: 6em;
     display: flex;
     flex-direction: column;
 }
 header{
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
-}
-nav{
-    display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    margin-top: 3.2em;
 }
-#logo{
-    font-size: 1.3rem;
-    margin-right: auto;
+#box nav{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1.7em;
+    align-items: center;
 }
 #menu{
     display: flex;
-    justify-content: space-between;
+    font-size: .8rem;
+    column-gap: 3em;
+    font-weight: 200;
     list-style: none;
 }
-#menu li{
-    margin: 0 1em;
+#logo{
+    font-size: 1rem;
 }
 #menu li a{
     text-decoration: none;
@@ -67,7 +68,7 @@ nav{
 }
 #middle-fill{
     font-size: 1rem;
-    padding: 0.7em 1.8em;
+    padding: 0.5em 1.2em;
     border-radius: 10em; 
     background-color: #fff;
     color: #482be7;
@@ -75,18 +76,20 @@ nav{
 main{
     width: 100%;
     margin-top: auto;
-    width: 58%;
-    margin-top: 5.4em;
+    margin-top: 5em;
 }
 section #test{
     width: 100%;
 }
 main #test h1{
     font-size: 4rem;
+    width: 58%;
 }
 #test h5{
     font-size: 1.2rem;
+    font-weight: 300;
     margin-top: 1.6em;
+    width: 58%;
 }
 main #cto{
     width: 100%;
@@ -96,18 +99,70 @@ main #cto a{
     text-decoration: none;
 }
 main #cto #big-fill{
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0.9em 1.7em;
     background: #ffffff;
     border-radius: 5.6em;
     color: #482BE7;
 }
 main #cto #big-white-outline{
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #FFFFFF;
     background: rgba(255, 255, 255, 0.30);
     border-radius: 5.5em;
     border: 0.1em solid rgba(255, 255, 255, 1);
     padding: 0.9em 1.8em;
     margin-left: 1.2em;
+}
+#box a, button{
+    cursor: pointer;
+}
+
+/* ......................
+    Mobile Screen layout
+......................... */
+
+@media (max-width:425px) {
+    html{
+        font-size: 14px;
+    }
+    body .overlay{
+        position: fixed;
+    }
+    #box{
+        width: 85%;
+        max-width: 320px;
+        padding-top: 0;
+        padding-bottom: 3em;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
+        row-gap: 4em;
+        width: 100%;
+        margin-top: 3.2em;
+    }
+    #box nav{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2em;
+        align-items: center;
+        width: auto;
+    }
+    #menu{
+        font-size: .8rem;
+        font-weight: 400;
+        column-gap: 2em;
+    }
+    main #test h1{
+        font-size: 3rem;
+        width: 100%;
+    }
+    #test h5{
+        font-size: 1rem;
+        font-weight: 150;
+        margin-top: 1.6em;
+        width: 100%;
+    }
 }
